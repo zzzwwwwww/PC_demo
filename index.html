@@ -1,0 +1,288 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-24 15:02:17
+ * @LastEditTime: 2020-04-27 15:13:42
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vueCodee:\vulnova\index.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vulnova</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <script src="js/jquery-1.12.2.js"></script>
+    <script src="js/banner.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $(function () {
+            //滚动条事件
+            $(window).scroll(function () {
+                console.log($(document).scrollTop());
+               //判断向上卷曲出去的距离是否大于等于 应用类样式top的div的高度
+                if($(document).scrollTop()>=66){
+                    //获取导航栏的元素 .nav 脱离文档流
+                    $(".nav").css("position","fixed").css("top",0);
+                    $(".main").css("marginTop",$(".nav").height());
+ 
+                }else{
+                    $(".nav").css("position","static");
+                    $(".main").css("marginTop",0);
+                }
+            });
+        });
+     </script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="nav">
+        <nav>
+            <div class="header_logo">
+                <a href="index.html">
+                    <img src="img/logo.jpg" alt="" width="66px" height="15px" sizes="65px">
+                </a>
+            </div>
+            <div class="head_list">
+                <ul class="header_nav">
+                    <li class="header_list">
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li class="header_list">
+                        <a href="login.html">物联网平台</a>
+                    </li>
+                    <li class="header_list">
+                        <a>智慧城市</a>
+                        <ul class="city_list">
+                            <li><a href="city.html">智慧城市</a></li>
+                            <li><a href="school.html">智慧校区</a></li>
+                            <li><a href="property.html">智慧物业</a></li>
+                        </ul>
+                    </li>
+                    <li class="header_list">
+                        <a>安全用电</a>
+                        <ul class="city_list">
+                            <li><a href="electronic_control.html">智能电控</a></li>
+                            <li><a href="fire_control.html">智能消防</a></li>
+                            <li><a href="lightning_protection.html">智能防雷</a></li>
+                        </ul>
+                    </li>
+                    <li class="header_list">
+                        <a>IT咨询</a>
+                        <ul class="city_list">
+                            <li><a href="it_consultation.html">系统集成咨询</a></li>
+                            <li><a href="it_consultation.html">信息化建设咨询</a></li>
+                            <li><a href="it_consultation.html">网络艰涩咨询</a></li>
+                        </ul>
+                    </li>
+                    <li class="header_list">
+                        <a href="index.html">VR仿真</a>
+                    </li>
+                    <li class="header_list">
+                        <a>解决方案</a>
+                        <ul class="city_list">
+                            <li><a href="information_technology.html">信息化基础建设</a></li>
+                            <li><a href="data_construction.html">数据中心建设</a></li>
+                        </ul>
+                    </li>
+                    <li class="header_list">
+                        <a href="index.html">咨询</a>
+                    </li>
+                    <li class="header_list">
+                        <a>关于我们</a>
+                        <ul class="city_list">
+                            <li><a href="introduction.html">公司简介</a></li>
+                            <li><a href="com_address.html">联系我们</a></li>
+                            <li><a href="recruit.html">招贤纳士</a></li>
+                        </ul>
+                    </li>
+                    <li class="header_list">
+                        <a href="index.html">下载</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="phone">
+                <img src="img/phone.svg" alt="">
+                        <span>022-23896177</span>
+            </div>
+            <div class="search">
+                <img src="img/search.svg" alt="">
+                <span>Search</span>
+            </div>
+            
+            
+        </nav>
+    </div>
+   
+    <div class="main">
+         <!-- 轮播图 -->
+        <div class="frame">
+            <div class="banners">
+    
+                <!--受保护块，不建议修改》》》-->
+                <div class="click_left"><img class="get_height" onclick="banner_left_right('left')" src="img/banner_left.png"></div>
+                <div class="click_right"><img onclick="banner_left_right('right')" src="img/banner_right.png"></div>
+                <div class="number">
+                    <div class="numbers"></div>
+                    <div style="clear: both;"></div>
+                </div>
+                <!--《《《受保护块，不建议修改-->
+    
+                <!--onlick事件调用函数link(参数1，参数2)>>>参数1:跳转链接; 参数2:跳转方式（true:在新的窗口打开链接,false:在当前窗口打开链接）-->
+                <div class="banner_img">
+    
+                    <!--在此位置内添加img标签即可>>>-->
+                    <img class="banner_img1" src="img/1-1.jpg">
+                    <img class="banner_img2" src="img/2-1.jpg">
+                    <img class="banner_img3" src="img/3-2.jpg">
+                    <!--<<<在此位置内添加img标签即可-->
+                    
+                </div>
+    
+                <!--此段代码不可移动位置-->
+                <script type="text/javascript">
+                    loads();
+                </script>
+                <!--此段代码不可移动位置-->
+    
+            </div>
+        </div>
+        <!-- 智慧城市 -->
+        <div class="products">
+            <div class="recom-hd">
+				<h4>智慧城市</h4>
+            </div>
+            <div class="recom-bd">
+                <div class="recom-list">
+                    <img src="img/city.jpg" alt="" >
+                </div>
+                <div class="recom-list">
+                    <img src="img/cs.jpg" alt="" width="288" height="196">
+                    <h3><a href="#">智慧校园</a></h3>
+                    <span>建设智慧互联网城市</span>
+                </div>
+                <div class="recom-list">
+                    <img src="img/yq.jpg" alt="" width="288" height="196">
+                    <h3><a href="#">智慧园区</a></h3>
+                    <span>让生活更便捷</span>
+                </div>
+                <div class="recom-list">
+                    <img src="img/wy.jpg" alt="" width="288" height="196">
+                    <h3><a href="#">智慧物业</a></h3>
+                    <span>让管理更高效</span>
+                </div>
+            </div>
+            
+        </div>
+        <!-- 安全用电 -->
+        <div class="products">
+            <div class="recom-hd">
+				<h4>安全用电</h4>
+            </div>
+            <div class="recom-bd">
+                <div class="recom-list">
+                    <img src="img/aq.jpg" alt="" >
+                </div>
+                <div class="recom-list">
+                    <img src="img/dk.jpg" alt="" width="288" height="196">
+                    <h3><a href="#">智能电控</a></h3>
+                    <span>电力状态全监控</span>
+                </div>
+                <div class="recom-list">
+                    <img src="img/xf.jpg" alt="" width="288" height="196">
+                    <h3><a href="#">智能消防</a></h3>
+                    <span>杜绝火灾事故</span>
+                </div>
+                <div class="recom-list">
+                    <img src="img/fl.jpg" alt="" width="288" height="196">
+                    <h3><a href="#">智能防雷</a></h3>
+                    <span>远离雷电灾害</span>
+                </div>
+            </div>
+            
+        </div>
+        <!-- IT咨询 -->
+        <div class="products">
+            <div class="recom-hd">
+				<h4>IT咨询</h4>
+            </div>
+            <div class="recom-bd">
+                <div class="recom-list">
+                    <img src="img/it.jpg" alt="" >
+                </div>
+                <div class="recom-list">
+                    <img src="img/jc.jpg" alt="" width="288" height="196">
+                    <h3><a href="#">系统集成咨询</a></h3>
+                    <span>一站式解决方案</span>
+                </div>
+                <div class="recom-list">
+                    <img src="img/101.jpg" alt="" width="288" height="196">
+                    <h3><a href="#">信息化建设咨询</a></h3>
+                    <span>企业信息化升级</span>
+                </div>
+                <div class="recom-list">
+                    <img src="img/102.jpg" alt="" width="288" height="196">
+                    <h3><a href="#">网络艰涩咨询</a></h3>
+                    <span>多种组网形式</span>
+                </div>
+            </div>
+            
+        </div>
+        <!-- VR仿真 -->
+        <div class="products">
+            <div class="recom-hd">
+				<h4>VR仿真</h4>
+            </div>
+            <div class="recom-bd">
+                <img src="img/VR1-768x228.jpg" alt="" width="1200" >
+            </div>
+            
+        </div>
+        <footer>
+            <div class="footer-in">
+				<div class="footer-l">
+					<dl>
+						<dt>智慧城市</dt>
+						<dd><a href="#">智慧城市</a></dd>
+						<dd><a href="#">智慧园区</a></dd>
+						<dd><a href="#">智慧物业</a></dd>
+					</dl>
+					<dl>
+						<dt>安全用电</dt>
+						<dd><a href="#">智能电控</a></dd>
+						<dd><a href="#">智能消防</a></dd>
+						<dd><a href="#">智能防雷</a></dd>
+					</dl>
+					<dl>
+						<dt>IT咨询</dt>
+						<dd><a href="#">系统集成咨询</a></dd>
+						<dd><a href="#">信息化建设咨询</a></dd>
+						<dd><a href="#">网络建设咨询</a></dd>
+                    </dl>
+                </div>
+                <div class="footer-r">
+                    <h4>联系我们</h4>
+                    <p>地址</p>
+                    <span>天津市西青区海泰创新三路8号</span>
+                    <p>营业时间</p>
+                    <span>星期一至星期五：9:00-18:00</span>
+                    <p>联系电话</p>
+                    <span>022-23896177</span>
+                    <p>Email</p>
+                    <span>vulnova@vulnova.com</span>
+                </div>
+            </div>
+            <div class="footer-on">
+                <p>Copyright ©伏诺瓦（天津）科技有限公司 All rights reserved. 电话：022-23896177</p>
+                <p>备案号：津ICP备17003573号 津公网安备12019202000298</p>
+            </div>
+		</footer>
+        </footer>
+    </div>
+    
+    
+</body>
+</html>

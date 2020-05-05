@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{ list-style: none;list-style-type:none;}
+
+body,html
+{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    /* background-color: #191919; */
+}
+.frame
+{
+    height: 40vw;
+    margin: 2vw auto;
+}
+a {
+    color: #050505;
+    text-decoration: none;  /* 取消下划线 */
+}
